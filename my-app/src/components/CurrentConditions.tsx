@@ -24,7 +24,7 @@ const CurrentConditions: React.FC<CurrentConditionsProps> = ({ weatherData }: an
     console.log(weatherData)
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={`http://openweathermap.org/img/w/${icon}.png`} />
+      <Card.Img className='icon' variant="top" src={`http://openweathermap.org/img/w/${icon}.png`} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
@@ -40,8 +40,7 @@ const CurrentConditions: React.FC<CurrentConditionsProps> = ({ weatherData }: an
         <ListGroup.Item>Max temp: <span>{Math.floor(temp_max)}</span>˚</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+
       </Card.Body>
     </Card>
   );

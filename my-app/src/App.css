@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .App {
   text-align: center;
+  position: fixed;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-image: linear-gradient(to right bottom, #247ea5, #197799, #0f708d, #066881, #016175);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  padding: 50px 50px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 
 .App-logo {
@@ -35,4 +51,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card .icon {
+  scale: 2;
+}
+
+span {
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
