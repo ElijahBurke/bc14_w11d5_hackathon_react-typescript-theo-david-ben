@@ -70,7 +70,7 @@ function App() {
     }
   }, [weatherData]);
 
-  console.log(weatherData);
+  //console.log(weatherData);
 
   return (
     <div className="App">
