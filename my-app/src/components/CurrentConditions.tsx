@@ -1,22 +1,11 @@
-import { currentConditionsData } from "../App";
+import React from 'react'
 
-interface CurrentConditionsProps {
-    weatherData: currentConditionsData;
+
+function CurrentConditions( weatherData: any) {
+
+  return (
+    <div className="current-conditions">Current Conditions</div>
+  )
 }
 
-const CurrentConditions: React.FC<CurrentConditionsProps> = ({
-    weatherData,
-}) => {
-    return <div className="current-conditions">Current Conditions</div>;
-};
-
-export default CurrentConditions;
-
-// function CurrentConditions(props: CurrentConditionsProps) {
-
-//   return (
-//     <div className="current-conditions">Current Conditions</div>
-//   )
-// }
-
-// export default CurrentConditions
+export default CurrentConditions
