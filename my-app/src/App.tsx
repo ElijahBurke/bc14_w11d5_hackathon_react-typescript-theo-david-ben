@@ -29,7 +29,7 @@ interface MainData {
   humidity: number;
   description: string;
   icon: string;
-  city: string;
+  name: string;
 }
 
 function App() {
@@ -64,7 +64,7 @@ function App() {
         humidity: main.humidity,
         description: weather[0].description,
         icon: weather[0].icon,
-        city: name,
+        name: name,
       };
       setMainData(mainData);
     }
