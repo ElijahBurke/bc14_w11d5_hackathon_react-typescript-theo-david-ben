@@ -2,7 +2,9 @@ import React from 'react'; import { Button } from 'primereact/button';
 import { InputText } from "primereact/inputtext";
 
 
-function Inputs() {
+function Inputs(handleClick: any) {
+
+  
 
   return (
     <div className="inputs">Inputs
@@ -14,11 +16,6 @@ function Inputs() {
         <span className="p-input-icon-left">
             <i className="pi pi-search" />
             <InputText placeholder="Search" />
-        </span>
-
-        <span className="p-input-icon-right">
-            <i className="pi pi-spin pi-spinner" />
-            <InputText />
         </span>
     </div>
     </div>

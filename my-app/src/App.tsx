@@ -35,6 +35,24 @@ interface MainData {
 function App() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [mainData, setMainData] = useState<MainData | null>(null);
+  const [cityName, setCityName] = useState<string>("");
+
+
+  async function handleClick() {
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=2a6c1152df7ffa7bf18c9cf173d9ef6d`
+      );
+      const data = await response.json();
+      setWeatherData(data);
+    } catch (error) {
+      console.error("Error fetching weather data:", error);
+    }
+  }
+  function handleCityName() {
+
+    
+  }
 
   useEffect(() => {
     async function getWeatherData() {
@@ -74,7 +92,7 @@ function App() {
 
   return (
     <div className="App">
-      <Inputs />
+      <Inputs handleClick={handleClick}/>
       {mainData && <CurrentConditions weatherData={mainData} />}
     </div> 
   )
