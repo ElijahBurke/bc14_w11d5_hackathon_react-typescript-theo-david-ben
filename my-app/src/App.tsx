@@ -41,7 +41,7 @@ function App() {
   async function handleClick() {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=2a6c1152df7ffa7bf18c9cf173d9ef6d`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=2a6c1152df7ffa7bf18c9cf173d9ef6d`
       );
       const data = await response.json();
       setWeatherData(data);
@@ -49,16 +49,15 @@ function App() {
       console.error("Error fetching weather data:", error);
     }
   }
-  function handleCityName() {
-
-    
+  function handleCityName(value: string) {
+    setCityName(value);
   }
 
   useEffect(() => {
     async function getWeatherData() {
       try {
         const response = await fetch(
-          "https://api.openweathermap.org/data/2.5/weather?q=london&appid=2a6c1152df7ffa7bf18c9cf173d9ef6d"
+          "https://api.openweathermap.org/data/2.5/weather?q=london&units=metric&q=&appid=2a6c1152df7ffa7bf18c9cf173d9ef6d"
         );
         const data = await response.json();
         setWeatherData(data);
@@ -92,7 +91,7 @@ function App() {
 
   return (
     <div className="App">
-      <Inputs handleClick={handleClick}/>
+      <Inputs handleCityName={handleCityName}  handleClick={handleClick}/>
       {mainData && <CurrentConditions weatherData={mainData} />}
     </div> 
   )

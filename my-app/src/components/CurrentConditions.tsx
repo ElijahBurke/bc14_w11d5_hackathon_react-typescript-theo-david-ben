@@ -32,12 +32,12 @@ const CurrentConditions: React.FC<CurrentConditionsProps> = ({ weatherData }: an
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>{temp}</ListGroup.Item>
-        <ListGroup.Item>{humidity}</ListGroup.Item>
-        <ListGroup.Item>{feels_like}</ListGroup.Item>
-        <ListGroup.Item>{pressure}</ListGroup.Item>
-        <ListGroup.Item>{temp_min}</ListGroup.Item>
-        <ListGroup.Item>{temp_max}</ListGroup.Item>
+        <ListGroup.Item>Temp: <span>{Math.floor(temp)}</span>˚</ListGroup.Item>
+        <ListGroup.Item>Humidity: <span>{humidity}</span>%</ListGroup.Item>
+        <ListGroup.Item>Feels like: <span>{Math.floor(feels_like)}</span></ListGroup.Item>
+        <ListGroup.Item>Pressure: <span>{pressure}</span> hPa</ListGroup.Item>
+        <ListGroup.Item>Min temp: <span>{Math.floor(temp_min)}</span>˚</ListGroup.Item>
+        <ListGroup.Item>Max temp: <span>{Math.floor(temp_max)}</span>˚</ListGroup.Item>
       </ListGroup>
       <Card.Body>
         <Card.Link href="#">Link</Card.Link>
