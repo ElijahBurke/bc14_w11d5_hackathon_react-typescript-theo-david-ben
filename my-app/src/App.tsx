@@ -92,7 +92,9 @@ function App() {
   return (
     <div className="App">
       <Inputs handleCityName={handleCityName}  handleClick={handleClick}/>
+      <hr />
       {mainData && <CurrentConditions weatherData={mainData} />}
+      
     </div> 
   )
 }

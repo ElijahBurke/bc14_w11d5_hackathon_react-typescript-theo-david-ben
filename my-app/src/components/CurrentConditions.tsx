@@ -24,12 +24,14 @@ const CurrentConditions: React.FC<CurrentConditionsProps> = ({ weatherData }: an
     console.log(weatherData)
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img className='icon' variant="top" src={`http://openweathermap.org/img/w/${icon}.png`} />
+      
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
+        <Card.Title className='title'>{name}</Card.Title>
         <Card.Text>
           {description}
         </Card.Text>
+        <Card.Img className='icon' variant="top" src={`http://openweathermap.org/img/w/${icon}.png`} />
+        <hr/>
       </Card.Body>
       <ListGroup className="list-group-flush">
         <ListGroup.Item>Temp: <span>{Math.floor(temp)}</span>˚</ListGroup.Item>

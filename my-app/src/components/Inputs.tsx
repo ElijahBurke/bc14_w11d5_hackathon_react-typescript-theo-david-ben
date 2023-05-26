@@ -15,17 +15,17 @@ const Inputs: React.FC<InputsProps> = ({ handleClick, handleCityName }) => {
 
   return (
     <div className="inputs">
-    <div className="card flex justify-content-center">
-            <Button onClick={handleClick} label="Submit" />
-        </div>
-        <br />
-        <div className="card flex flex-wrap justify-content-center gap-3">
+        <div className="inputsearch">
         <span className="p-input-icon-left">
             <i className="pi pi-search" />
-            <InputText onChange={handleInputChange} placeholder="Search" />
+            <InputText onChange={handleInputChange}  className="input-search" placeholder="Search" />
         </span>
+        <div className="card flex justify-content-center">
+        <Button className="button-search" onClick={handleClick} label="Submit" />
+        </div>
     </div>
     </div>
+    
   )
 }
 
